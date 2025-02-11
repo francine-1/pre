@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prelimvaldez</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #673ab7;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .header {
+          background-color: #9933cc;
+          color: #ffffff;
+          padding: 30px;
+}
+
+        .container {
+            display: flex;
+            flex-grow: 1;
+            background-color: transparent;
+            padding: 20px ;
+           
+        }
+
+        nav {
+            width: 200px;
+            background-color: transparent;
+            padding: 20px 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px 5px;
+            text-decoration: none;
+
+            color: #333;
+            background-color: #81d4fa;
+            margin-bottom: 10px;
+            /* Remove border-radius for rectangles */
+            text-align: left;
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* For smooth effects */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        nav a:hover {
+            background-color: #4fc3f7;
+            transform: translateY(-2px); /* Move up slightly on hover */
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: white; /* White background for main */
+        }
+
+        #about-me img {
+            max-width: 170px;
+            height: auto;
+            float: left;
+            margin: 0px 20px 0 0;
+            border: 1px solid #ddd;
+            
+            border-radius: 5px;
+        }
+
+        #about-me p {
+            text-align: justify;
+        }
+
+        footer {
+          background-color: #0099cc;
+          color: #ffffff;
+          text-align: center;
+          font-size: 20px;
+          padding: 25px;
+          
+          
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: white; /* White background for table */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: white; /* Ensure cells are also white */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .favorite {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Francine Kate T. Valdez</h1>
+   </div>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#about-me" data-section="about-me">&nbsp;&nbsp;&nbsp;About ME</a></li>
+                <li><a href="#subjects-taken" data-section="subjects-taken">&nbsp;&nbsp;&nbsp;Subjects Taken</a></li>
+                <li><a href="#currently-enrolled" data-section="currently-enrolled">&nbsp;&nbsp;&nbsp;Currently Enrolled</a></li>
+                <li><a href="#contact-me" data-section="contact-me">&nbsp;&nbsp;&nbsp;Contact Me</a></li>
+                <li><a href="#my-favorites" data-section="my-favorites">&nbsp;&nbsp;&nbsp;My Favorites</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="about-me" class="active">
+                <h2>About Me</h2>
+                <img src="my.jpg" alt="Your Picture">
+                <p>My name is Francine Kate Valdez, and my friends and family know me as France or Cing. <br>I was born on May 22, 2005, and I'm 19. 
+                 <br> I live in Sapad, Lanao del Norte.<br> I'm a hard worker, and I think if you try hard, you can do anything. 
+                 <br> I like learning new things even though i am a slow learner.</p>
+            </section>
+
+            <section id="subjects-taken">
+                <h2>Subjects Taken</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject Name</th>
+                            <th>Description</th>
+                            <th>Units</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Introduction to Programming</td>
+                            <td>Basic programming concepts</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>Front-end web development</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="currently-enrolled">
+                <h2>Currently Enrolled</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Schedule</th>
+                            <th>Subject Name</th>
+                            <th>Description</th>
+                            <th>Units</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mon/Wed 9:00 AM</td>
+                            <td>Data Structures and Algorithms</td>
+                            <td>Study of data structures</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Tue/Thu 1:00 PM</td>
+                            <td>Database Management</td>
+                            <td>Working with databases</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="contact-me">
+                <h2>Contact Me</h2>
+                <p>Contact Number: 0945 693 2525</p>
+                <p>Facebook: <a href="your_facebook_link">Francine Valdez</a></p>
+                <p>Email: <a href="francine.valdez022@gmail.com">francine.valdez022@gmail.com</a></p>
+            </section>
+
+            <section id="my-favorites">
+                <h2>My Favorites</h2>
+
+                <div class="favorite">
+                    <h3>Favorite Food: Adobo</h3>
+                    <p>A classic Filipino dish.</p>
+                </div>
+
+                
+              
+
+                <div class="favorite">
+                    <h3>Favorite Place: Palayo sa schoolworks</h3>
+                    <p>Relaxing and peaceful.</p>
+                </div>
+
+              
+
+                <div class="favorite">
+                    <h3>Favorite Sport: Badminton</h3>
+                    <p>Fun and competitive.</p>
+                </div>
+
+                <div class="favorite">
+                    <h3>Favorite Game: Damath</h3>
+                    <p>Mentally stimulating.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p><b>&copy; 2023-2024 ITP4 | All Right Reserved</b></p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const targetSectionId = link.dataset.section;
+
+                sections.forEach(section => section.classList.remove('active'));
+
+                const targetSection = document.getElementById(targetSectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
